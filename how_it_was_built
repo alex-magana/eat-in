@@ -81,3 +81,25 @@ Add matchers to model Item
     https://github.com/alex-magana/eat-in/pull/3/files
 
 Run tests
+
+Generate Restaurants controller
+    rails g controller Restaurants
+
+Generate Items controller
+    rails g controller Items
+
+Add request spec files
+    mkdir spec/requests && touch spec/requests/{restaurants_spec.rb,items_spec.rb}
+    - Request specs are used for APIs because they are designed to emulate the
+    behaviour across the full stack including, routing (provide by Rails).
+    - Request specs can hit the actual endpoints in lieu of the controller
+    specs which call the controller methods directly.
+
+Add factories
+    touch spec/factories/{restaurants.rb,items.rb}
+
+Define Restaurant factory
+    [link to commit goes here]
+
+Define Item factory
+    [link to commit goes here]

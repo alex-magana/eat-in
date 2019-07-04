@@ -44,3 +44,5 @@ Push code to GitHub
     git remote add origin git@github.com:alex-magana/eat-in.git
     git push -u origin master
 
+Configure should-matchers and factory_bot_rails
+    https://github.com/alex-magana/eat-in/pull/1/files

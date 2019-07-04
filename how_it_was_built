@@ -94,3 +94,12 @@ Add request spec files
     behaviour across the full stack including, routing (provide by Rails).
     - Request specs can hit the actual endpoints in lieu of the controller
     specs which call the controller methods directly.
+
+Add factories
+    touch spec/factories/{restaurants.rb,items.rb}
+
+Define Restaurant factory
+    [link to commit goes here]
+
+Define Item factory
+    [link to commit goes here]

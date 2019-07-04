@@ -60,3 +60,16 @@ Generate Item model
 
 Run the migrations
     rails db:migrate
+
+Add specs for model Restaurant
+
+Add specs for model Item
+
+Run tests
+    bundle exec rspec
+
+Add matchers to model Restaurant
+
+Add matchers to model Item
+
+Run tests

@@ -62,14 +62,22 @@ Run the migrations
     rails db:migrate
 
 Add specs for model Restaurant
+    https://github.com/alex-magana/eat-in/commit/67b3bd089a9a5587ee13cf8fa84618437db3937b
+    https://github.com/alex-magana/eat-in/pull/3/files
 
 Add specs for model Item
+    https://github.com/alex-magana/eat-in/commit/83e7418b2ec0cf805fed1d09d3d4998c31f71766
+    https://github.com/alex-magana/eat-in/pull/3/files
 
 Run tests
     bundle exec rspec
 
 Add matchers to model Restaurant
+    https://github.com/alex-magana/eat-in/commit/a9af7fbe7aa3b0765716fd182141ddecd99189ad
+    https://github.com/alex-magana/eat-in/pull/3/files
 
 Add matchers to model Item
+    https://github.com/alex-magana/eat-in/commit/f154d106b2937a030f4f8186ae78cfbbf9865048
+    https://github.com/alex-magana/eat-in/pull/3/files
 
 Run tests

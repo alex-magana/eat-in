@@ -1,0 +1,46 @@
+Guide: https://scotch.io/tutorials/build-a-restful-json-api-with-rails-5-part-one
+
+rails version 5..0.1
+ruby version 2.3.1
+
+PART ONE
+rails new eat-in --api -T
+    --api = generate the skeletal files for an api
+    -T = exclude Minitest the defualt testing framework
+
+Add gem, rspec-rails to Gemfile in groups, :development and :test.
+    group :development, :test do
+    end
+
+Add gem, factory_bot_rails, shoulda-matchers, faker and database_cleaner to the Gemfile in group :test
+    group :test do
+    end
+
+~~~
+# Try using gemsets later
+# Setup gem installation directory and local ruby version
+#     echo .gems > .rbenv-gemsets
+#     rbenv local 2.3.1
+~~~
+
+Change sqlite definition in Gemfile from gem 'sqlite3' to gem 'sqlite3', '~> 1.3.0'
+    - This addresses the issue in sqlite3_adapter.rb in
+    activerecord-5.0.7.2/lib/active_record/connection_adapters/
+
+bundle install
+
+Initialize the 'spec' directory
+    rails generate rspec:install
+
+Create the directory where we define facotries for the Models
+    mkdir spec/factories
+
+Create a repository on GitHub
+
+Push code to GitHub
+    git init
+    git add .
+    git commit -m "Add skeletal files"
+    git remote add origin git@github.com:alex-magana/eat-in.git
+    git push -u origin master
+

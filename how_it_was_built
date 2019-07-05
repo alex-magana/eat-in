@@ -109,3 +109,6 @@ Define Item factory
 Define Restaurant request specs
     [link goes here]
 
+Add method, json, as a utility for request specs
+    mkdir spec/support && touch spec/support/request_spec_helper.rb
+    [link goes here]

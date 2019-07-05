@@ -123,3 +123,15 @@ Add routes in config/routes.rb
     - The routes are nested to enforce the 1:m association at the route level.
     [link goes here]
 
+rails routes
+
+bundle exec rspec
+    - the route errors are resolved and rspec reports controller errors
+
+Add restaurant controller methods
+    - index - fetch restaurants
+    - create - create a restaurant
+    - show - fetch a restaurant
+    - update - update a restaurant
+    - destroy - delete a restaurant
+    [link goes here]

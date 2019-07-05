@@ -146,3 +146,8 @@ Define an exception handler to override ActiveRecord exceptions
     ActiveRecord::RecordNotFound which is raised by Model.find(:id), and,
     ActiveRecord::RecordInvalid which is raised by Model.create!
     [link goes here]
+
+Expose the ExceptionHandler and Response modules to the controllers
+    [link goes here]
+
+bundle exec rspec

@@ -112,3 +112,9 @@ Define Restaurant request specs
 Add method, json, as a utility for request specs
     mkdir spec/support && touch spec/support/request_spec_helper.rb
     [link goes here]
+
+Configure the shared utility, json, to be auto-loaded and include it
+as a shared module for all specs of type, request
+    [link goes here]
+
+Run tests

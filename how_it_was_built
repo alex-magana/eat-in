@@ -118,3 +118,8 @@ as a shared module for all specs of type, request
     [link goes here]
 
 Run tests
+
+Add routes in config/routes.rb
+    - The routes are nested to enforce the 1:m association at the route level.
+    [link goes here]
+

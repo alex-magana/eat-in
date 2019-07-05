@@ -140,3 +140,9 @@ Define json_response helper
     - controller helpers go in the app/controllers/concerns directory
     - it returns a json response with the appropriate status code
     [link goes here]
+
+Define an exception handler to override ActiveRecord exceptions
+    - this is used to handle
+    ActiveRecord::RecordNotFound which is raised by Model.find(:id), and,
+    ActiveRecord::RecordInvalid which is raised by Model.create!
+    [link goes here]

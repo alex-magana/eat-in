@@ -26,12 +26,12 @@ RSpec.describe 'Restaurants API', type: :request do
 
   # Test suite for GET /restaurants/:id
   describe 'GET /restaurants/:id' do
-    before { get "/restaurants/#{restaurant_id}"}
+    before { get "/restaurants/#{restaurant_id}" }
 
     context 'when the record exists' do
       it 'returns the restaurant' do
         expect(json).not_to be_empty
-        expect(json[id]).to eq(restaurant_id)
+        expect(json['id']).to eq(restaurant_id)
       end
 
       it 'returns status code 200' do
@@ -65,7 +65,7 @@ RSpec.describe 'Restaurants API', type: :request do
     end
 
     context 'when the request is valid' do
-      before { post '/restaurant', params: valid_attributes }
+      before { post '/restaurants', params: valid_attributes }
 
       it 'creates a restaurant' do
         expect(json['name']).to eq('Curry King')
@@ -77,7 +77,7 @@ RSpec.describe 'Restaurants API', type: :request do
     end
 
     context 'when the request is invalid' do
-      before { post 'restaurants', params: { name: 'KFC' } }
+      before { post '/restaurants', params: { name: 'KFC' } }
 
       it 'returns status code 422' do
         expect(response).to have_http_status(422)
@@ -85,7 +85,9 @@ RSpec.describe 'Restaurants API', type: :request do
 
       it 'returns a validation failure message' do
         expect(response.body)
-          .to match(/Validation failed: Created by can't be blank/)
+          .to match(
+            /Validation failed: Opening time can't be blank, Closing time can't be blank, Created by can't be blank/
+          )
       end
     end
   end
@@ -102,14 +104,14 @@ RSpec.describe 'Restaurants API', type: :request do
       end
 
       it 'returns status code 204' do
-        exxpect(response).to have_http_status(204)
+        expect(response).to have_http_status(204)
       end
     end
   end
 
   # Test suite for DELETE /restaurants/:id
   describe 'DELETE /restaurants/:id' do
-    before { delete "/restaurant/#{restaurant_id}" }
+    before { delete "/restaurants/#{restaurant_id}" }
 
     it 'returns the status code 204' do
       expect(response).to have_http_status(204)

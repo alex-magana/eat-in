@@ -135,3 +135,8 @@ Add restaurant controller methods
     - update - update a restaurant
     - destroy - delete a restaurant
     [link goes here]
+
+Define json_response helper
+    - controller helpers go in the app/controllers/concerns directory
+    - it returns a json response with the appropriate status code
+    [link goes here]

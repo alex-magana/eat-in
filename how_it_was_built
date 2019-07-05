@@ -151,3 +151,16 @@ Expose the ExceptionHandler and Response modules to the controllers
     [link goes here]
 
 bundle exec rspec
+
+Run api
+    rails s
+
+Test the /restaurants routes
+    curl -X GET http://localhost:3000
+    curl -X POST -H 'Content-Type: application/json' \
+        -d '{"name": "Curry King", "opening_time": "10:00", "closing_time": "23:00", "created_by": 1}' \
+        http://localhost:3000/restaurants
+    curl -X PUT -H 'Content-Type: application/json' \
+        -d '{"name": "Curry King Bethnal Green", "opening_time": "12:00", "closing_time": "20:00", "created_by": 1}' \
+        http://localhost:3000/restaurants/1
+    curl -X DELETE http://localhost:3000/restaurants/1

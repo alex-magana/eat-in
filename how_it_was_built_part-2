@@ -33,3 +33,19 @@ bundle install
 bundle exec rspec
     - User model specs pass at this point
 
+Add `gem 'jwt'` to the Gemflie
+    gem 'jwt'
+    https://stackoverflow.com/questions/1592534/what-is-token-based-authentication
+    [link goes here]
+
+bundle install
+
+Add the lib directory & create the jwt class file
+    mkdir app/lib
+    touch app/lib/json_web_token.rb
+    - As of rails 5 autoloading is disabled in production for thread safety
+    - The JWT class should live in eat-in/lib since it's not domain specific
+    - Since eat-in/lib is part of the autoload path, positioning the JWT class
+    in eat-in/lib may raise an issue with autoloading disabled
+    - The solution is to create 'lib' directory in eat-in/app
+    - eat/app is autoload in development and eagerloaded in production

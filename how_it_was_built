@@ -105,3 +105,62 @@ Define Restaurant factory
 Define Item factory
     https://github.com/alex-magana/eat-in/commit/a2f8d68d6249546a1c01a7f2ae2fd7a11222974a#diff-3fc86c1ec44b56044229f7ba074e38da
     https://github.com/alex-magana/eat-in/pull/4/files
+
+Define Restaurant request specs
+    [link goes here]
+
+Add method, json, as a utility for request specs
+    mkdir spec/support && touch spec/support/request_spec_helper.rb
+    [link goes here]
+
+Configure the shared utility, json, to be auto-loaded and include it
+as a shared module for all specs of type, request
+    [link goes here]
+
+Run tests
+
+Add routes in config/routes.rb
+    - The routes are nested to enforce the 1:m association at the route level.
+    [link goes here]
+
+rails routes
+
+bundle exec rspec
+    - the route errors are resolved and rspec reports controller errors
+
+Add restaurant controller methods
+    - index - fetch restaurants
+    - create - create a restaurant
+    - show - fetch a restaurant
+    - update - update a restaurant
+    - destroy - delete a restaurant
+    [link goes here]
+
+Define json_response helper
+    - controller helpers go in the app/controllers/concerns directory
+    - it returns a json response with the appropriate status code
+    [link goes here]
+
+Define an exception handler to override ActiveRecord exceptions
+    - this is used to handle
+    ActiveRecord::RecordNotFound which is raised by Model.find(:id), and,
+    ActiveRecord::RecordInvalid which is raised by Model.create!
+    [link goes here]
+
+Expose the ExceptionHandler and Response modules to the controllers
+    [link goes here]
+
+bundle exec rspec
+
+Run api
+    rails s
+
+Test the /restaurants routes
+    curl -X GET http://localhost:3000
+    curl -X POST -H 'Content-Type: application/json' \
+        -d '{"name": "Curry King", "opening_time": "10:00", "closing_time": "23:00", "created_by": 1}' \
+        http://localhost:3000/restaurants
+    curl -X PUT -H 'Content-Type: application/json' \
+        -d '{"name": "Curry King Bethnal Green", "opening_time": "12:00", "closing_time": "20:00", "created_by": 1}' \
+        http://localhost:3000/restaurants/1
+    curl -X DELETE http://localhost:3000/restaurants/1

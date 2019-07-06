@@ -23,3 +23,12 @@ bundle exec rspec
 
 Define the User model
     [link goes here]
+
+Add gem bcrypt to Gemfile
+    [link goes here]
+
+bundle install
+
+bundle exec rspec
+    - User model specs pass at this point
+

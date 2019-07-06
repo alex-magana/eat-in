@@ -1,0 +1,34 @@
+- Authentication is based on Hristo Georgiev apporach with certain notable alterations
+    - https://www.pluralsight.com/guides/token-based-authentication-with-ruby-on-rails-5-api
+
+Generate the User model
+    rails g model User name:string email:string password_digest:string
+    [link goes here]
+
+Run migrations
+    rails db:migrate
+    [link goes here]
+
+Prepare the db test environment
+    rails db:test:prepare
+
+Add specs for User model
+    [link goes here]
+
+Add factory for User model
+    touch spec/factories/users.rb
+    [link goes here]
+
+bundle exec rspec
+
+Define the User model
+    [link goes here]
+
+Add gem bcrypt to Gemfile
+    [link goes here]
+
+bundle install
+
+bundle exec rspec
+    - User model specs pass at this point
+

@@ -3,32 +3,57 @@
 
 Generate the User model
     rails g model User name:string email:string password_digest:string
-    [link goes here]
+    https://github.com/alex-magana/eat-in/commit/0c42fed8383ecbc0c29be65f6f7d653cf47e13f1
+    https://github.com/alex-magana/eat-in/pull/7/files
 
 Run migrations
     rails db:migrate
-    [link goes here]
+    https://github.com/alex-magana/eat-in/pull/7/files
 
 Prepare the db test environment
     rails db:test:prepare
 
 Add specs for User model
-    [link goes here]
+    https://github.com/alex-magana/eat-in/commit/12563311d53b5860cd3ee8bf46a173cc0589fda6
 
 Add factory for User model
     touch spec/factories/users.rb
-    [link goes here]
+    https://github.com/alex-magana/eat-in/commit/d5eb5a98ba93e1a3c3ece0de25db80710b16bfca
 
 bundle exec rspec
 
 Define the User model
-    [link goes here]
+    https://github.com/alex-magana/eat-in/commit/7e1b35ce350d8baf2fbc73a82e4cfe8bd7de6709
 
 Add gem bcrypt to Gemfile
-    [link goes here]
+    https://github.com/alex-magana/eat-in/commit/8777bb6b0af740d44b81430c685e50e888b52bac
 
 bundle install
 
 bundle exec rspec
     - User model specs pass at this point
 
+Add `gem 'jwt'` to the Gemflie
+    gem 'jwt'
+    https://stackoverflow.com/questions/1592534/what-is-token-based-authentication
+    [link goes here]
+
+bundle install
+
+Add the lib directory & create the jwt class file
+    mkdir app/lib
+    touch app/lib/json_web_token.rb
+    - As of rails 5 autoloading is disabled in production for thread safety
+    - The JWT class should live in eat-in/lib since it's not domain specific
+    - Since eat-in/lib is part of the autoload path, positioning the JWT class
+    in eat-in/lib may raise an issue with autoloading disabled
+    - The solution is to create 'lib' directory in eat-in/app
+    - eat/app is autoload in development and eagerloaded in production
+
+Define the JsonWebToken class
+    [link goes here]
+
+Add custom errors handlers JWT errors
+    - Defining the custom errors as sub-classes of StandardError
+    enables us to rescue_from the custom errors once the errors are raised
+    [link goes here]

@@ -20,3 +20,6 @@ Add factory for User model
     [link goes here]
 
 bundle exec rspec
+
+Define the User model
+    [link goes here]

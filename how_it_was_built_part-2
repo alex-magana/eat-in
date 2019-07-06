@@ -3,29 +3,30 @@
 
 Generate the User model
     rails g model User name:string email:string password_digest:string
-    [link goes here]
+    https://github.com/alex-magana/eat-in/commit/0c42fed8383ecbc0c29be65f6f7d653cf47e13f1
+    https://github.com/alex-magana/eat-in/pull/7/files
 
 Run migrations
     rails db:migrate
-    [link goes here]
+    https://github.com/alex-magana/eat-in/pull/7/files
 
 Prepare the db test environment
     rails db:test:prepare
 
 Add specs for User model
-    [link goes here]
+    https://github.com/alex-magana/eat-in/commit/12563311d53b5860cd3ee8bf46a173cc0589fda6
 
 Add factory for User model
     touch spec/factories/users.rb
-    [link goes here]
+    https://github.com/alex-magana/eat-in/commit/d5eb5a98ba93e1a3c3ece0de25db80710b16bfca
 
 bundle exec rspec
 
 Define the User model
-    [link goes here]
+    https://github.com/alex-magana/eat-in/commit/7e1b35ce350d8baf2fbc73a82e4cfe8bd7de6709
 
 Add gem bcrypt to Gemfile
-    [link goes here]
+    https://github.com/alex-magana/eat-in/commit/8777bb6b0af740d44b81430c685e50e888b52bac
 
 bundle install
 

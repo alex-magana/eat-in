@@ -42,11 +42,13 @@ RSpec.describe 'Items API' do
       end
 
       it 'returns the item' do
-        expect(json['id']).to eq(:id)
+        expect(json['id']).to eq(id)
       end
     end
 
     context 'when a restaurant item does not exist' do
+      let(:id) { 0 }
+
       it 'returns a status code 404' do
         expect(response).to have_http_status(404) 
       end
@@ -68,25 +70,23 @@ RSpec.describe 'Items API' do
         post "/restaurants/#{restaurant_id}/items", params: valid_attributes
       end
 
-      context 'when request attributes are valid' do
-        it 'returns a status code 201' do
-          expect(response).to have_http_status(201)
-        end
+      it 'returns a status code 201' do
+        expect(response).to have_http_status(201)
+      end
+    end
+
+    context 'when an invalid request' do
+      before { post "/restaurants/#{restaurant_id}/items", params: {} }
+
+      it 'returns a status code 422' do
+        expect(response).to have_http_status(422)
       end
 
-      context 'when an invalid request' do
-        before { post "/restaurants/#{restaurant_id}/items", params: {} }
-
-        it 'returns a status code 422' do
-          expect(response).to have_http_status(422)
-        end
-
-        it 'returns a failure message' do
-          expect(response.body)
-            .to match(
-              /Validation failed: Name can't be blank, Price can't be blank, Available can't be blank/
-            )
-        end
+      it 'returns a failure message' do
+        expect(response.body)
+          .to match(
+            /Validation failed: Name can't be blank, Price can't be blank/
+          )
       end
     end
   end

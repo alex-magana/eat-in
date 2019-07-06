@@ -14,7 +14,7 @@ class ItemsController < ApplicationController
 
   # POST /restaurants/:restaurant_id/items
   def create
-    @restaurant.items.create(item_params)
+    @restaurant.items.create!(item_params)
     json_response(@restaurant, :created)
   end
 

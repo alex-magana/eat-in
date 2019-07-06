@@ -185,3 +185,8 @@ Add items controller methods
     - update - update a item
     - destroy - delete a item
     [link goes here]
+
+bundle exec rspec
+
+Rectify failing tests
+    [link goes here]

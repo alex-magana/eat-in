@@ -174,7 +174,8 @@ Test the /restaurants routes
     curl -X DELETE http://localhost:3000/restaurants/1
 
 Define Items request specs
-    [link goes here]
+    https://github.com/alex-magana/eat-in/commit/401a7da391c5ce159358a298cbb24c8d6e65d3dd
+    https://github.com/alex-magana/eat-in/pull/6
 
 bundle exec rspec
 
@@ -184,9 +185,11 @@ Add items controller methods
     - show - fetch a item
     - update - update a item
     - destroy - delete a item
-    [link goes here]
+    https://github.com/alex-magana/eat-in/commit/2d594cdad2bf1f13a2cecbd622ea73a4246af27b
+    https://github.com/alex-magana/eat-in/pull/6
 
 bundle exec rspec
 
 Rectify failing tests
-    [link goes here]
+    https://github.com/alex-magana/eat-in/commit/26104f3ddd3db37185bc3c226779fd77b0a591cd
+    https://github.com/alex-magana/eat-in/pull/6

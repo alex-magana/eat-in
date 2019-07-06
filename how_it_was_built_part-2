@@ -1,4 +1,4 @@
-Authentication is based on Hristo Georgiev apporach with certain notable alterations
+- Authentication is based on Hristo Georgiev apporach with certain notable alterations
     - https://www.pluralsight.com/guides/token-based-authentication-with-ruby-on-rails-5-api
 
 Generate the User model
@@ -15,4 +15,8 @@ Prepare the db test environment
 Add specs for User model
     [link goes here]
 
+Add factory for User model
+    touch spec/factories/users.rb
+    [link goes here]
 
+bundle exec rspec

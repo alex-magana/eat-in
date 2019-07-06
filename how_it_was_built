@@ -132,7 +132,7 @@ rails routes
 bundle exec rspec
     - the route errors are resolved and rspec reports controller errors
 
-Add restaurant controller methods
+Add restaurants controller methods
     - index - fetch restaurants
     - create - create a restaurant
     - show - fetch a restaurant
@@ -177,3 +177,11 @@ Define Items request specs
     [link goes here]
 
 bundle exec rspec
+
+Add items controller methods
+    - index - fetch items
+    - create - create a item
+    - show - fetch a item
+    - update - update a item
+    - destroy - delete a item
+    [link goes here]

@@ -7,7 +7,7 @@ RSpec.describe 'Items API' do
 
   # Test suite for GET /restaurants/:restaurant_id/items
   describe 'GET /restaurants/:restaurant_id/items' do
-    before { get "/restaurants/#{:restaurant_id}/items" }
+    before { get "/restaurants/#{restaurant_id}/items" }
 
     context 'when restaurant exists' do
       it 'returns status code 200' do

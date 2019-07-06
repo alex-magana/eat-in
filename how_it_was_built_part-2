@@ -36,7 +36,8 @@ bundle exec rspec
 Add `gem 'jwt'` to the Gemflie
     gem 'jwt'
     https://stackoverflow.com/questions/1592534/what-is-token-based-authentication
-    [link goes here]
+    https://github.com/alex-magana/eat-in/commit/331068b2f89e96694adea9ced26edd41260337f7
+    https://github.com/alex-magana/eat-in/pull/8/files
 
 bundle install
 
@@ -51,9 +52,12 @@ Add the lib directory & create the jwt class file
     - eat/app is autoload in development and eagerloaded in production
 
 Define the JsonWebToken class
-    [link goes here]
+    https://github.com/alex-magana/eat-in/commit/a63dddae4476f0462ee1a04c9f591d4b84721379
+    https://github.com/alex-magana/eat-in/pull/8/files
 
 Add custom errors handlers JWT errors
     - Defining the custom errors as sub-classes of StandardError
     enables us to rescue_from the custom errors once the errors are raised
-    [link goes here]
+    https://github.com/alex-magana/eat-in/commit/3aeb17d9f7c8ccb54fff536e3f3e53c63a032e5f
+    https://github.com/alex-magana/eat-in/pull/8/files
+

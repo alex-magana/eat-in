@@ -107,21 +107,25 @@ Define Item factory
     https://github.com/alex-magana/eat-in/pull/4/files
 
 Define Restaurant request specs
-    [link goes here]
+    https://github.com/alex-magana/eat-in/commit/5fefa2dc0853e9ccedcb817c06e1b3fe1f7bfa38
+    https://github.com/alex-magana/eat-in/pull/5/files
 
 Add method, json, as a utility for request specs
     mkdir spec/support && touch spec/support/request_spec_helper.rb
-    [link goes here]
+    https://github.com/alex-magana/eat-in/commit/e390895b23828107f59c91ed91f7e6a1e07e2688
+    https://github.com/alex-magana/eat-in/pull/5/files
 
 Configure the shared utility, json, to be auto-loaded and include it
 as a shared module for all specs of type, request
-    [link goes here]
+    https://github.com/alex-magana/eat-in/commit/5e891b838dd311cf4e859b2f612bd80d500d0f7c
+    https://github.com/alex-magana/eat-in/pull/5/files
 
 Run tests
 
 Add routes in config/routes.rb
     - The routes are nested to enforce the 1:m association at the route level.
-    [link goes here]
+    https://github.com/alex-magana/eat-in/commit/2a692677a5ac2d6580d0ffcf9ebf022fad5f5746
+    https://github.com/alex-magana/eat-in/pull/5/files
 
 rails routes
 
@@ -134,21 +138,25 @@ Add restaurant controller methods
     - show - fetch a restaurant
     - update - update a restaurant
     - destroy - delete a restaurant
-    [link goes here]
+    https://github.com/alex-magana/eat-in/commit/dbaaf8a5e26977ae79438767bcd8d157ec16eeda
+    https://github.com/alex-magana/eat-in/pull/5/files
 
 Define json_response helper
     - controller helpers go in the app/controllers/concerns directory
     - it returns a json response with the appropriate status code
-    [link goes here]
+    https://github.com/alex-magana/eat-in/commit/3eda84695333c7071c5e9f2f3f9b78df403d8218
+    https://github.com/alex-magana/eat-in/pull/5/files
 
 Define an exception handler to override ActiveRecord exceptions
     - this is used to handle
     ActiveRecord::RecordNotFound which is raised by Model.find(:id), and,
     ActiveRecord::RecordInvalid which is raised by Model.create!
-    [link goes here]
+    https://github.com/alex-magana/eat-in/commit/8867595eee6cb55b9a9e3e86e278136e8620819a
+    https://github.com/alex-magana/eat-in/pull/5/files
 
 Expose the ExceptionHandler and Response modules to the controllers
-    [link goes here]
+    https://github.com/alex-magana/eat-in/commit/71d450d8fd5323c1265ca0accb852bdc9f55acb9
+    https://github.com/alex-magana/eat-in/pull/5/files
 
 bundle exec rspec
 

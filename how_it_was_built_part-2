@@ -61,3 +61,16 @@ Add custom errors handlers JWT errors
     https://github.com/alex-magana/eat-in/commit/3aeb17d9f7c8ccb54fff536e3f3e53c63a032e5f
     https://github.com/alex-magana/eat-in/pull/8/files
 
+Create an authorization service class
+    - This authorizes requests to assert a valid token and user payload is included.
+    - app/auth directory houses the auth service
+    mkdir app/auth
+    touch app/auth/authorize_api_request.rb
+    mkdir spec/auth
+    touch spec/auth/authorize_api_request_spec.rb
+
+Add specs for AuthorizeApiRequest
+    - The auth service defines an entry method, call, that returns a valid user
+    object and raises an error when invalid.
+    [link goes here]
+

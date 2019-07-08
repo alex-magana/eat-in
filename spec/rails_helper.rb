@@ -77,6 +77,7 @@ RSpec.configure do |config|
 
   # include the shared module in request specs
   config.include RequestSpecHelper, type: :request
+  config.include ControllerSpecHelper
 
   # start by truncating all the tables but then use
   # the faster transaction strategy the rest of the time.

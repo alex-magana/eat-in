@@ -100,3 +100,20 @@ Define a message provider class
     https://github.com/alex-magana/eat-in/pull/9/files
 
 bundle exec rspec spec/auth -fd
+
+Create authentication class service
+    touch app/auth/authenticate_user.rb
+    touch spec/auth/authenticate_user_spec.rb
+
+Add specs for AuthenticateUser
+    [link goes here]
+
+bundle exec rspec
+
+Define AuthenticateUser class
+    -The AuthenticateUser service accepts a user email and password,
+    checks if they are valid and then creates a token with
+    the user id as the payload.
+    [link goes here]
+
+bundle exec rspec spec/auth -fd

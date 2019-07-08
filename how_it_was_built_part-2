@@ -100,3 +100,8 @@ Define a message provider class
     https://github.com/alex-magana/eat-in/pull/9/files
 
 bundle exec rspec spec/auth -fd
+
+Create authentication class service
+    touch app/auth/authenticate_user.rb
+    touch spec/auth/authenticate_user_spec.rb
+

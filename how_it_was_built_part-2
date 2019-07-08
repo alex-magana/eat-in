@@ -142,4 +142,10 @@ Add the `/auth/login` route to the aplication
     https://github.com/alex-magana/eat-in/commit/3f63404d8f4cfcb403547de5f0b9cef138ae2285
     https://github.com/alex-magana/eat-in/pull/11/files
 
+Create the Users controller
+    rails g controller Users
+    touch spec/requests/users_spec.rb
+
+Define Users request specs
+    [link goes here]
 

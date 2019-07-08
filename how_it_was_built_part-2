@@ -105,3 +105,7 @@ Create authentication class service
     touch app/auth/authenticate_user.rb
     touch spec/auth/authenticate_user_spec.rb
 
+Add specs for AuthenticateUser
+    [link goes here]
+
+bundle exec rspec

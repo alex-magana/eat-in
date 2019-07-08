@@ -90,3 +90,9 @@ bundle exec rspec
 
 Define AuthorizeApiRequest class
     [link goes here]
+
+Define a message provider class
+    touch app/lib/message.rb
+    [link goes here]
+
+bundle exec rspec spec/auth -fd

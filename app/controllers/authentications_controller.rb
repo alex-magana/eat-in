@@ -13,6 +13,6 @@ class AuthenticationsController < ApplicationController
   private
 
   def auth_params
-    paams.permit(:emai, :password)
+    params.permit(:email, :password)
   end
 end

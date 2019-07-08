@@ -3,4 +3,6 @@ Rails.application.routes.draw do
   resources :restaurants do
     resources :items
   end
+
+  post 'auth/login', to: 'authentications#authenticate'
 end

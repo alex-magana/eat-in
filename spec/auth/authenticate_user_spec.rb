@@ -1,10 +1,12 @@
+require 'rails_helper'
+
 RSpec.describe AuthenticateUser do
   # create test user
   let(:user) { create(:user) }
   # valid request subject
   subject(:valid_auth_object) { described_class.new(user.email, user.password) }
   # invalid request object
-  subject(:invalid_request_object) { described_class.new('foo', 'bar') }
+  subject(:invalid_auth_object) { described_class.new('foo', 'bar') }
 
   # Test suite for AuthenticateUser#call
   describe '#call' do
@@ -22,7 +24,7 @@ RSpec.describe AuthenticateUser do
         expect { invalid_auth_object.call }
           .to raise_error(
             ExceptionHandler::AuthenticationError,
-            /Invalid Credentials/
+            /Invalid credentials/
           )
       end
     end

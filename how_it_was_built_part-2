@@ -119,3 +119,24 @@ Define AuthenticateUser class
     https://github.com/alex-magana/eat-in/pull/10/files
 
 bundle exec rspec spec/auth -fd
+
+Generate Authentication controller
+    - This controller handles requests that validate user credentials.
+    rails g controller Authentications
+
+Add request specs for the Authentications controller
+    touch spec/requests/authentications_spec.rb
+    [link goes here]
+
+bundle exec rspec
+
+Define the AuthenticationsController
+    - This controller is slim in nature
+    - This is made possible by handling the authentication business
+    logic in the AuthenticateUser service.
+    [link goes here]
+
+Add the `/auth/login` route to the aplication
+    [link goes here]
+
+

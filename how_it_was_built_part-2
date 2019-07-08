@@ -85,3 +85,8 @@ Expose the helpers to specs via RSpec.configure
 
 Expose RequestSpecHelper to specs of all types
     [link goes here]
+
+bundle exec rspec
+
+Define AuthorizeApiRequest class
+    [link goes here]

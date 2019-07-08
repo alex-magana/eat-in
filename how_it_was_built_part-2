@@ -72,27 +72,31 @@ Create an authorization service class
 Add specs for AuthorizeApiRequest
     - The auth service defines an entry method, call, that returns a valid user
     object and raises an error when invalid.
-    [link goes here]
+    https://github.com/alex-magana/eat-in/commit/5ec51934dc879023cca636ff43d3addc8f3eaa90
 
 Create file for helpers, token_generator and expire_token_generator
     touch spec/support/controller_spec_helper.rb
 
 Define helpers
-    [link goes here]
+    https://github.com/alex-magana/eat-in/commit/6de2cf08e2ab997730c3e3b6d660bf70d47620f8
 
 Expose the helpers to specs via RSpec.configure
-    [link goes here]
+    https://github.com/alex-magana/eat-in/commit/4256458abd98040621bb3a205cd3cf704e9697d4
+    https://github.com/alex-magana/eat-in/pull/9/files    
 
 Expose RequestSpecHelper to specs of all types
-    [link goes here]
+    https://github.com/alex-magana/eat-in/commit/e3d974b02fe256fe75b4ebbc23120fba86bec140
+    https://github.com/alex-magana/eat-in/pull/9/files
 
 bundle exec rspec
 
 Define AuthorizeApiRequest class
-    [link goes here]
+    https://github.com/alex-magana/eat-in/commit/845a80c89760367becdedf9228deacb46b2e8db4
+    https://github.com/alex-magana/eat-in/pull/9/files
 
 Define a message provider class
     touch app/lib/message.rb
-    [link goes here]
+    https://github.com/alex-magana/eat-in/commit/6bf4fa65b78c041eac00047031458f841de11b23
+    https://github.com/alex-magana/eat-in/pull/9/files
 
 bundle exec rspec spec/auth -fd

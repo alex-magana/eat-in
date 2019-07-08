@@ -109,3 +109,11 @@ Add specs for AuthenticateUser
     [link goes here]
 
 bundle exec rspec
+
+Define AuthenticateUser class
+    -The AuthenticateUser service accepts a user email and password,
+    checks if they are valid and then creates a token with
+    the user id as the payload.
+    [link goes here]
+
+bundle exec rspec spec/auth -fd

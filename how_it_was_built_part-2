@@ -74,3 +74,8 @@ Add specs for AuthorizeApiRequest
     object and raises an error when invalid.
     [link goes here]
 
+Create file for helpers, token_generator and expire_token_generator
+    touch spec/support/controller_spec_helper.rb
+
+Define helpers
+    [link goes here]

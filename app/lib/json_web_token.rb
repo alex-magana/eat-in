@@ -5,7 +5,7 @@ class JsonWebToken
 
   # create a token based on the payload (user_id)
   # with expiration set to 24 hours
-  def self.encode(payload, exp = 24.hours.from.now)
+  def self.encode(payload, exp = 24.hours.from_now)
     # set expiry to 24 hours from creation time
     payload[:exp] = exp.to_i
     # sign token with application secret

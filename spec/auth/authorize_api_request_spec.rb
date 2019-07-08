@@ -44,7 +44,7 @@ RSpec.describe AuthorizeApiRequest do
 
       context 'when token is expired' do
         let(:header) { { 'Authorization' => expired_token_generator(user.id) } }
-        subject(request_object) { described_class.new(header) }
+        subject(:request_object) { described_class.new(header) }
 
         it 'raises ExceptionHandler::ExpiredSignature error' do
           expect { request_object.call }
@@ -63,7 +63,7 @@ RSpec.describe AuthorizeApiRequest do
           expect { invalid_request_object.call }
             .to raise_error(
               ExceptionHandler::InvalidToken,
-              /Not enough or too many segements/
+              /Not enough or too many segments/
             )
         end
       end

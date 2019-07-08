@@ -79,3 +79,9 @@ Create file for helpers, token_generator and expire_token_generator
 
 Define helpers
     [link goes here]
+
+Expose the helpers to specs via RSpec.configure
+    [link goes here]
+
+Expose RequestSpecHelper to specs of all types
+    [link goes here]

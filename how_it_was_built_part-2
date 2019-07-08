@@ -149,3 +149,15 @@ Create the Users controller
 Define Users request specs
     [link goes here]
 
+Add signup route
+    [link goes here]
+
+Add specs for the authorization callback
+    - A callback in ApplicationsController that checks requests
+    are from authenticated users prior to running the logic
+    associated with the respective request.
+    touch spec/controllers/application_controller_spec.rb
+    [link goes here]
+
+Define the authorization callback
+    [link goes here]

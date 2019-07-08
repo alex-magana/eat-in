@@ -119,3 +119,9 @@ Define AuthenticateUser class
     https://github.com/alex-magana/eat-in/pull/10/files
 
 bundle exec rspec spec/auth -fd
+
+Generate Authentication controller
+    - This controller handles requests that validate user credentials.
+    rails g controller Authentications
+
+Add tests for the Authentication controller

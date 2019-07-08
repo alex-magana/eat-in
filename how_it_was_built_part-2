@@ -106,7 +106,8 @@ Create authentication class service
     touch spec/auth/authenticate_user_spec.rb
 
 Add specs for AuthenticateUser
-    [link goes here]
+    https://github.com/alex-magana/eat-in/commit/4b7978ce926bece2ca15637733e7a92456974f3d
+    https://github.com/alex-magana/eat-in/pull/10/files
 
 bundle exec rspec
 
@@ -114,6 +115,7 @@ Define AuthenticateUser class
     -The AuthenticateUser service accepts a user email and password,
     checks if they are valid and then creates a token with
     the user id as the payload.
-    [link goes here]
+    https://github.com/alex-magana/eat-in/commit/04fb69d61b854f5f2aa96dc84baca5b7c6716ba3
+    https://github.com/alex-magana/eat-in/pull/10/files
 
 bundle exec rspec spec/auth -fd

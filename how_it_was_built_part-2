@@ -166,3 +166,7 @@ Define the authorization callback
     - `current_user` is used by other controllers
     [link goes here]
 
+Exempt the authenticate action in AuthenticationController from authorization
+    [link goes here]
+
+

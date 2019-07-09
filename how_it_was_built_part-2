@@ -177,3 +177,5 @@ bundle exec rspec
 Add user test data to Restaurants request spec
     [link goes here]
 
+Use `current_user` association to handle restaurants
+    [link goes here]

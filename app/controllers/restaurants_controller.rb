@@ -3,7 +3,8 @@ class RestaurantsController < ApplicationController
 
   # GET /restaurants
   def index
-    @restaurants = Restaurant.all
+    # get current user restaurants
+    @restaurants = current_user.restaurants
     json_response(@restaurants)
   end
 
@@ -19,7 +20,9 @@ class RestaurantsController < ApplicationController
     # passes.
     # Model.create! raises ActiveRecord::RecordInvalid if validation fails.
     # This is why we use create! in liue of create
-    @restaurant = Restaurant.create!(restaurant_params)
+
+    # create restaurants belonging to the the current user
+    @restaurant = current_user.restaurants.create!(restaurant_params)
     json_response(@restaurant, :created)
   end
 
@@ -48,6 +51,8 @@ class RestaurantsController < ApplicationController
 
   def restaurant_params
     # whitelist params
+
+    # remove `created_by` from list of permitted parameters
     params.permit(:name, :opening_time, :closing_time, :created_by)
   end
 

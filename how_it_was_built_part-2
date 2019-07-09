@@ -169,4 +169,7 @@ Define the authorization callback
 Exempt the authenticate action in AuthenticationController from authorization
     [link goes here]
 
+Exempt the sign-up action in UsersController from authorization
+    [link goes here]
 
+bundle exec rspec

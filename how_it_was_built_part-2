@@ -173,3 +173,7 @@ Exempt the sign-up action in UsersController from authorization
     [link goes here]
 
 bundle exec rspec
+
+Add user test data to Restaurants request spec
+    [link goes here]
+

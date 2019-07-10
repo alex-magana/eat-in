@@ -126,7 +126,8 @@ Generate Authentication controller
 
 Add request specs for the Authentications controller
     touch spec/requests/authentications_spec.rb
-    [link goes here]
+    https://github.com/alex-magana/eat-in/commit/3065ac74a441b6ff16d0f922038f9bfe6fd93843
+    https://github.com/alex-magana/eat-in/pull/11/files    
 
 bundle exec rspec
 
@@ -134,9 +135,52 @@ Define the AuthenticationsController
     - This controller is slim in nature
     - This is made possible by handling the authentication business
     logic in the AuthenticateUser service.
-    [link goes here]
+    https://github.com/alex-magana/eat-in/commit/2bbaefcaf45309169b4859863cfe51447173357d
+    https://github.com/alex-magana/eat-in/pull/11/files
 
 Add the `/auth/login` route to the aplication
+    https://github.com/alex-magana/eat-in/commit/3f63404d8f4cfcb403547de5f0b9cef138ae2285
+    https://github.com/alex-magana/eat-in/pull/11/files
+
+Create the Users controller
+    rails g controller Users
+    touch spec/requests/users_spec.rb
+
+Define Users request specs
     [link goes here]
 
+Add signup route
+    [link goes here]
 
+Add specs for the authorization callback
+    - A callback in ApplicationsController that checks requests
+    are from authenticated users prior to running the logic
+    associated with the respective request.
+    touch spec/controllers/application_controller_spec.rb
+    [link goes here]
+
+Define the authorization callback 
+    - The application will verify the request by calling
+    the request authorization service
+    - The `current_user` is set is the request is authorized
+    - `current_user` is used by other controllers
+    [link goes here]
+
+Exempt the authenticate action in AuthenticationController from authorization
+    [link goes here]
+
+Exempt the sign-up action in UsersController from authorization
+    [link goes here]
+
+bundle exec rspec
+
+Add user test data to Restaurants request spec
+    [link goes here]
+
+Use `current_user` association to handle restaurants
+    [link goes here]
+
+Update Items request specs to use the `current_user` context
+    [link goes here]
+
+bundle exec rspec

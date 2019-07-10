@@ -1,13 +1,22 @@
+require 'rails_helper'
+
 RSpec.describe 'Items API' do
   # initialize test data
-  let!(:restaurant) { create(:restaurant) }
+  let(:user) { create(:user) }
+
+  let!(:restaurant) { create(:restaurant, created_by: user.id) }
   let!(:items) { create_list(:item, 20, restaurant_id: restaurant.id) }
   let(:restaurant_id) { restaurant.id }
   let(:id) { items.first.id }
 
+  let(:headers) { valid_headers }
+
   # Test suite for GET /restaurants/:restaurant_id/items
   describe 'GET /restaurants/:restaurant_id/items' do
-    before { get "/restaurants/#{restaurant_id}/items" }
+    before do
+      get "/restaurants/#{restaurant_id}/items",
+          params: {}, headers: headers
+    end
 
     context 'when restaurant exists' do
       it 'returns status code 200' do
@@ -32,9 +41,12 @@ RSpec.describe 'Items API' do
     end
   end
 
-  # Test suite for GET /restaurants/:restaurant_id/items/:item_id
-  describe 'GET /restaurants/:restaurant_id/items/:item_id' do
-    before { get "/restaurants/#{restaurant_id}/items/#{id}" }
+  # Test suite for GET /restaurants/:restaurant_id/items/:id
+  describe 'GET /restaurants/:restaurant_id/items/:id' do
+    before do
+      get "/restaurants/#{restaurant_id}/items/#{id}",
+          params: {}, headers: headers
+    end
 
     context 'when restaurant item exists' do
       it 'returns a status code 200' do
@@ -62,12 +74,13 @@ RSpec.describe 'Items API' do
   # Test suite for POST /restaurants/:restaurant_id/items
   describe 'POST /restaurants/:restaurant_id/items' do
     let(:valid_attributes) do
-      { name: 'Caesar Salad', price: 440.50, available: true }
+      { name: 'Caesar Salad', price: 440.50, available: true }.to_json
     end
 
     context 'when request attributes are valid' do
       before do
-        post "/restaurants/#{restaurant_id}/items", params: valid_attributes
+        post "/restaurants/#{restaurant_id}/items",
+             params: valid_attributes, headers: headers
       end
 
       it 'returns a status code 201' do
@@ -76,7 +89,10 @@ RSpec.describe 'Items API' do
     end
 
     context 'when an invalid request' do
-      before { post "/restaurants/#{restaurant_id}/items", params: {} }
+      before do
+        post "/restaurants/#{restaurant_id}/items",
+             params: {}, headers: headers
+      end
 
       it 'returns a status code 422' do
         expect(response).to have_http_status(422)
@@ -93,11 +109,11 @@ RSpec.describe 'Items API' do
 
   # Test suite for PUT /restaurants/:restaurant_id/items/:id
   describe 'PUT /restaurants/:restaurant_id/items/:id' do
-    let(:valid_attributes) { { name: 'Greek Salad'} }
+    let(:valid_attributes) { { name: 'Greek Salad' }.to_json }
 
     before do
       put "/restaurants/#{restaurant_id}/items/#{id}",
-          params: valid_attributes
+          params: valid_attributes, headers: headers
     end
 
     context 'when item exists' do
@@ -126,7 +142,10 @@ RSpec.describe 'Items API' do
 
   # Test suite for DELETE /restaurants/:restaurant_id/items/:id
   describe 'DELETE /restaurants/:restaurant_id/items/:id' do
-    before { delete "/restaurants/#{restaurant_id}/items/#{id}" }
+    before do
+      delete "/restaurants/#{restaurant_id}/items/#{id}",
+             params: {}, headers: headers
+    end
 
     it 'returns a status code 204' do
       expect(response).to have_http_status(204)

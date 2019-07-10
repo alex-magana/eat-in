@@ -3,6 +3,8 @@
 # the result
 
 class AuthenticationsController < ApplicationController
+  skip_before_action :authorize_request, only: :authenticate
+
   # return an auth token once user is authenticated
   def authenticate
     auth_token =

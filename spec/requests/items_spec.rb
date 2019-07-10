@@ -1,3 +1,5 @@
+require 'rails_helper'
+
 RSpec.describe 'Items API' do
   # initialize test data
   let(:user) { create(:user) }
@@ -72,7 +74,7 @@ RSpec.describe 'Items API' do
   # Test suite for POST /restaurants/:restaurant_id/items
   describe 'POST /restaurants/:restaurant_id/items' do
     let(:valid_attributes) do
-      { name: 'Caesar Salad', price: 440.50, available: true }
+      { name: 'Caesar Salad', price: 440.50, available: true }.to_json
     end
 
     context 'when request attributes are valid' do
@@ -107,7 +109,7 @@ RSpec.describe 'Items API' do
 
   # Test suite for PUT /restaurants/:restaurant_id/items/:id
   describe 'PUT /restaurants/:restaurant_id/items/:id' do
-    let(:valid_attributes) { { name: 'Greek Salad'} }
+    let(:valid_attributes) { { name: 'Greek Salad' }.to_json }
 
     before do
       put "/restaurants/#{restaurant_id}/items/#{id}",

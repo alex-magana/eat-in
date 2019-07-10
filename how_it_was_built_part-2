@@ -182,3 +182,5 @@ Use `current_user` association to handle restaurants
 
 Update Items request specs to use the `current_user` context
     [link goes here]
+
+bundle exec rspec

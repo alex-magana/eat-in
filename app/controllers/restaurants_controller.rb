@@ -19,7 +19,7 @@ class RestaurantsController < ApplicationController
     # Model.create! creates an object and saves it in the database, If validation
     # passes.
     # Model.create! raises ActiveRecord::RecordInvalid if validation fails.
-    # This is why we use create! in liue of create
+    # This is why we use create! in lieu of create
 
     # create restaurants belonging to the the current user
     @restaurant = current_user.restaurants.create!(restaurant_params)
@@ -53,7 +53,8 @@ class RestaurantsController < ApplicationController
     # whitelist params
 
     # remove `created_by` from list of permitted parameters
-    params.permit(:name, :opening_time, :closing_time, :created_by)
+    # this is because `created_by` is provided via current_user
+    params.permit(:name, :opening_time, :closing_time)
   end
 
   def set_restaurant

@@ -8,7 +8,7 @@ RSpec.describe 'Restaurants API', type: :request do
   # this creates 10 restaurants records based on the factory
   # definded for restaurant.
   # the factory uses faker methods to generate sample data
-  let!(:restaurants) { create_list(:restaurant, 10) }
+  let!(:restaurants) { create_list(:restaurant, 10, created_by: user.id) }
   let(:restaurant_id) { restaurants.first.id }
 
   # authorize request
@@ -67,7 +67,7 @@ RSpec.describe 'Restaurants API', type: :request do
         opening_time: '10:00',
         closing_time: '23:00',
         created_by: user.id.to_s
-    }.to_json
+      }.to_json
     end
 
     context 'when the request is valid' do
@@ -83,7 +83,9 @@ RSpec.describe 'Restaurants API', type: :request do
     end
 
     context 'when the request is invalid' do
-      before { post '/restaurants', params: { name: 'KFC' }, headers: headers }
+      let(:invalid_attributes) { { name: nil }.to_json }
+
+      before { post '/restaurants', params: invalid_attributes, headers: headers }
 
       it 'returns status code 422' do
         expect(response).to have_http_status(422)
@@ -92,7 +94,7 @@ RSpec.describe 'Restaurants API', type: :request do
       it 'returns a validation failure message' do
         expect(response.body)
           .to match(
-            /Validation failed: Opening time can't be blank, Closing time can't be blank, Created by can't be blank/
+            /Validation failed: Name can't be blank, Opening time can't be blank, Closing time can't be blank/
           )
       end
     end
@@ -100,7 +102,7 @@ RSpec.describe 'Restaurants API', type: :request do
 
   # Test suite for PUT /restaurants/:id
   describe 'PUT /restaurants/:id' do
-    let(:valid_attributes) { { name: 'Crepes and Cones' } }
+    let(:valid_attributes) { { name: 'Crepes and Cones' }.to_json }
 
     context 'when the record exists' do
       before do
@@ -122,7 +124,7 @@ RSpec.describe 'Restaurants API', type: :request do
   describe 'DELETE /restaurants/:id' do
     before do
       delete "/restaurants/#{restaurant_id}",
-             parmas: {}, headers: headers
+             params: {}, headers: headers
     end
 
     it 'returns the status code 204' do

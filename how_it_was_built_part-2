@@ -147,40 +147,53 @@ Create the Users controller
     touch spec/requests/users_spec.rb
 
 Define Users request specs
-    [link goes here]
+    https://github.com/alex-magana/eat-in/commit/e59317b4ae7fb0eee21f41c933741d74238dcded
+    https://github.com/alex-magana/eat-in/pull/12/files
+
+Define the Users controller
+    https://github.com/alex-magana/eat-in/commit/519068bd494aa2cd40bec40566249522d9387114
+    https://github.com/alex-magana/eat-in/pull/12/files
 
 Add signup route
-    [link goes here]
+    https://github.com/alex-magana/eat-in/commit/f9727170c8c034a6737a1fe15faf0955c57a297f
+    https://github.com/alex-magana/eat-in/pull/12/files
 
 Add specs for the authorization callback
     - A callback in ApplicationsController that checks requests
     are from authenticated users prior to running the logic
     associated with the respective request.
     touch spec/controllers/application_controller_spec.rb
-    [link goes here]
+    https://github.com/alex-magana/eat-in/commit/c947f463812ccabe1c0e038a8ba6e69cc270134f
+    https://github.com/alex-magana/eat-in/pull/12/files
 
 Define the authorization callback 
     - The application will verify the request by calling
     the request authorization service
     - The `current_user` is set is the request is authorized
     - `current_user` is used by other controllers
-    [link goes here]
+    https://github.com/alex-magana/eat-in/commit/d70f9df251f1f22ba141bbbe1dcc1a351c6d5a38
+    https://github.com/alex-magana/eat-in/pull/12/files
 
 Exempt the authenticate action in AuthenticationController from authorization
-    [link goes here]
+    https://github.com/alex-magana/eat-in/commit/bdf97683f4fa625ff8bdbee9c4f35ee76eb35e8a
+    https://github.com/alex-magana/eat-in/pull/12/files
 
 Exempt the sign-up action in UsersController from authorization
-    [link goes here]
+    https://github.com/alex-magana/eat-in/commit/d23bd8ba781ab9f2dd13fc2b143e1d87b29f78b4
+    https://github.com/alex-magana/eat-in/pull/12/files
 
 bundle exec rspec
 
 Add user test data to Restaurants request spec
-    [link goes here]
+    https://github.com/alex-magana/eat-in/commit/e5db8dca25d7f7e4db3287cbe5687bc50cea6e9a
+    https://github.com/alex-magana/eat-in/pull/12/files
 
 Use `current_user` association to handle restaurants
-    [link goes here]
+    https://github.com/alex-magana/eat-in/commit/ae78713c3725ceafe175ec239e39a52acf4dbdf1
+    https://github.com/alex-magana/eat-in/pull/12/files
 
 Update Items request specs to use the `current_user` context
-    [link goes here]
+    https://github.com/alex-magana/eat-in/commit/bf3d4315d79ca1321ebcc1df85c5580223c6602e
+    https://github.com/alex-magana/eat-in/pull/12/files
 
 bundle exec rspec

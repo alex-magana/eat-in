@@ -35,3 +35,7 @@ Modify routing to support versioning
     - We use scope, module, to namespace controllers.
     - This averts the need to use version sumbers in the URI
     [link goes here]
+
+Move restaurants and items controllers to the v1 namespace.
+    mkdir app/controllers/v1
+    mv app/controllers/{restaurants_controller.rb,items_controller.rb} app/controllers/v1

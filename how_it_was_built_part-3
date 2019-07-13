@@ -30,3 +30,8 @@ Define the ApiVersion class
     https://en.wikipedia.org/wiki/Media_type#Vendor_tree
     [link goes here]
 
+Modify routing to support versioning
+    - Using version numbers in a URI is considered an anti-pattern
+    - We use scope, module, to namespace controllers.
+    - This averts the need to use version sumbers in the URI
+    [link goes here]

@@ -79,7 +79,9 @@ Test the 2 different versions
         http://localhost:3000/restaurants
 
 Add gem, active_model_serializers, to provide a serializer for model, Restaurant.
-    [link goes here]
+    https://github.com/alex-magana/eat-in/commit/75dc513fae70243e3050cf8da1ab8e666a491b47
+    https://github.com/alex-magana/eat-in/pull/14/files
+    https://github.com/rails-api/active_model_serializers
 
 bundle install
 
@@ -87,7 +89,8 @@ Generate a serializer, restaurant.
     rails g serializer restaurant
 
 Define the Restaurant serializer
-    [link goes here]
+    https://github.com/alex-magana/eat-in/commit/136b39d3970acfc5cf89e19b13dcb3af18759f03
+    https://github.com/alex-magana/eat-in/pull/14/files
 
 Test the routes
     curl -X POST -d '{"email": "foo@bar.com", "password": "foobar"}' \

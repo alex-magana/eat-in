@@ -42,3 +42,24 @@ Move restaurants and items controllers to the v1 namespace.
 
 Define restaurants and items controllers under the v1 namespace
     [link goes here]
+
+Test the /restaurants routes
+    curl -X GET http://localhost:3000
+    curl -X POST -d '{"email": "foo@bar.com", "password": "foobar"}' \
+        http://localhost:3000/auth/login
+    curl -X GET -H 'Accept: application/vnd.restaurants.v1+json' \
+        -H 'Authorization: ey...AWH3FNTd3T0jMB7HnLw2bYQbK0g' \
+        http://localhost:3000/restaurants
+    # Attempting to access a non-existent version should resolve to the default version
+    curl -X GET -H 'Accept: application/vnd.restaurants.v2+json' \
+        -H 'Authorization: ey...AWH3FNTd3T0jMB7HnLw2bYQbK0' \
+        http://localhost:3000/restaurants
+
+Add v2 restaurants controller for testing
+    rails g controller v2/restaurants
+
+Define the v2 namespace
+    [link goes here]
+
+Define the test controller with a dummy response
+    [link goes here]

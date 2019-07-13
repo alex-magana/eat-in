@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   # new versions are to be defined here since Rails cycles through all
   # the routes from top to bottom until method, `matches?`,
   # finds a match i.e resolves to true
+  scope module: :v2, constraints: ApiVersion.new('v2') do
+    resources :restaurants, only: :index
+  end
 
   # namespace the controllers without affecting the URI
   # set v1 as the default vesion

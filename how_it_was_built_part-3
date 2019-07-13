@@ -63,3 +63,11 @@ Define the v2 namespace
 
 Define the test controller with a dummy response
     [link goes here]
+
+Test the 2 different versions
+    curl -X GET -H 'Accept: application/vnd.restaurants.v1+json' \
+        -H 'Authorization: ey...AWH3FNTd3T0jMB7HnLw2bYQbK0g' \
+        http://localhost:3000/restaurants
+    curl -X GET -H 'Accept: application/vnd.restaurants.v2+json' \
+        -H 'Authorization: ey...AWH3FNTd3T0jMB7HnLw2bYQbK0' \
+        http://localhost:3000/restaurants

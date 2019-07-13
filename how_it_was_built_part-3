@@ -1,0 +1,32 @@
+- As an API publisher/developer one needs to establish a contracts
+with their users. The contract dictates the workings of the API and
+specifies what and how resoirces are served by the API's endpoints.
+-Every breaking change for example should be published in a new version
+-In this section we implement versioning using `advanced constraints`
+provided by rails routing. The said constraints are used to dictate
+the controller that handles the incoming requests.
+-Advanced constraints in rails routing require that the target object
+is able to respond to `matches?` (http://guides.rubyonrails.org/routing.html#advanced-constraints)
+
+Create class ApiVersion
+    - Class ApiVersion checks the API version from the request headers
+    and routes the request to the appropriate header.
+    - The class goes in app/lib since it's non-domain specific
+    touch app/lib/api_version.rb
+
+Define the ApiVersion class
+    - Content negotiation is a mechanism that enables serving of different versions
+    or representations of a resource suing the same URI
+    - ApiVersion provides content negotiation, whereby, the client tells the server
+    the media type it(the client) understands
+    - The Media Type Specification supports defining a custom media types using the
+    vendor tree notation
+        application/vnd.example.resource+json
+    - eat-in defines the media type below to enable clients to
+    choose the version they support
+        application/vnd.restaurants.{version_number}.json
+    https://en.wikipedia.org/wiki/Content_negotiation
+    https://tools.ietf.org/html/rfc6838#section-3.2
+    https://en.wikipedia.org/wiki/Media_type#Vendor_tree
+    [link goes here]
+

@@ -114,3 +114,21 @@ bundle install
 
 Modify RestaurantsController to support pagination
     [link goes here]
+
+Define seed data for testing the endpoints
+    [link goes here]
+
+Populate test db
+    rake db:seed
+
+Test the endpoints
+    curl -X POST -d '{"email": "foo@bar.com", "password": "foobar"}' \
+        http://localhost:3000/auth/login
+    curl -X GET -H 'Accept: application/vnd.restaurants.v1+json' \
+        -H 'Authorization: ey...AWH3FNTd3T0jMB7HnLw2bYQbK0g' \
+        -d '{"page": 1}' \
+        http://localhost:3000/restaurants
+    curl -X GET -H 'Accept: application/vnd.restaurants.v1+json' \
+        -H 'Authorization: ey...AWH3FNTd3T0jMB7HnLw2bYQbK0g' \
+        -d '{"page": 2}' \
+        http://localhost:3000/restaurants

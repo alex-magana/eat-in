@@ -85,3 +85,21 @@ bundle install
 
 Generate a serializer, restaurant.
     rails g serializer restaurant
+
+Define the Restaurant serializer
+    [link goes here]
+
+Test the routes
+    curl -X POST -d '{"email": "foo@bar.com", "password": "foobar"}' \
+        http://localhost:3000/auth/login
+    curl -X POST -H 'Accept: application/vnd.restaurants.v1+json' \
+        -H 'Authorization: ey...AWH3FNTd3T0jMB7HnLw2bYQbK0g' \
+        -d '{"name": "Curry King", "opening_time": "10:00", "closing_time": "23:00", "created_by": 1}' \
+        http://localhost:3000/restaurants
+    curl -X POST -H 'Accept: application/vnd.restaurants.v1+json' \
+        -H 'Authorization: ey...AWH3FNTd3T0jMB7HnLw2bYQbK0g' \
+        -d '{"name": "CJ's", "opening_time": "10:00", "closing_time": "23:00", "created_by": 1}' \
+        http://localhost:3000/restaurants
+    curl -X GET -H 'Accept: application/vnd.restaurants.v1+json' \
+        -H 'Authorization: ey...AWH3FNTd3T0jMB7HnLw2bYQbK0g' \
+        http://localhost:3000/restaurants

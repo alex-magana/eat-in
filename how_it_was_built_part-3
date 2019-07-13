@@ -39,3 +39,6 @@ Modify routing to support versioning
 Move restaurants and items controllers to the v1 namespace.
     mkdir app/controllers/v1
     mv app/controllers/{restaurants_controller.rb,items_controller.rb} app/controllers/v1
+
+Define restaurants and items controllers under the v1 namespace
+    [link goes here]

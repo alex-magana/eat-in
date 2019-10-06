@@ -3,10 +3,9 @@ Guide: https://scotch.io/tutorials/build-a-restful-json-api-with-rails-5-part-on
 rails version 5.0.1
 ruby version 2.3.1
 
-PART ONE
 rails new eat-in --api -T
     --api = generate the skeletal files for an api
-    -T = exclude Minitest the defualt testing framework
+    -T = exclude Minitest the default testing framework
 
 Add gem, rspec-rails to Gemfile in groups, :development and :test.
     group :development, :test do

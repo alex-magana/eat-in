@@ -108,15 +108,18 @@ Test the routes
         http://localhost:3000/restaurants
 
 Add gem, will_paginate, to provide pagination
-    [link goes here]
+    https://github.com/alex-magana/eat-in/commit/36243d66649d8913f837794c414a97daccae2e46
+    https://github.com/alex-magana/eat-in/pull/15/files
 
 bundle install
 
 Modify RestaurantsController to support pagination
-    [link goes here]
+    https://github.com/alex-magana/eat-in/pull/15/commits/36243d66649d8913f837794c414a97daccae2e46
+    https://github.com/alex-magana/eat-in/pull/15/files
 
 Define seed data for testing the endpoints
-    [link goes here]
+    https://github.com/alex-magana/eat-in/pull/15/commits/b50d6a82f7c684b77716be9f8425c7c24017ecec
+    https://github.com/alex-magana/eat-in/pull/15/files
 
 Populate test db
     rake db:seed

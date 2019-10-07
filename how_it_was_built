@@ -49,16 +49,19 @@ Configure should-matchers and factory_bot_rails
 Generate Restaurant model
     rails g model Restaurant name:string opening_time:string closing_time:string created_by:string
     - This generates a migration file in db/migrate/, a model in app/models/ and a spec file in rspec/spec/models
+    https://github.com/alex-magana/eat-in/pull/2/files    
 
 Generate Item model
     rails g model Item name:string price:decima{10,2} available:boolean restaurant:references
     - `restaurant:references` creates an association between the Restaurant and Item models.
         - it add a foreign key, restaurant_id, in table Item.
         - it adds a `belongs_to` associaton to the Item model
-    - use 'price:decima{10,2}' or 'price:decima{10-2}' for zsh
+    - use 'price:decimal{10,2}' or 'price:decimal{10-2}' for zsh
+    https://github.com/alex-magana/eat-in/pull/2/files
 
 Run the migrations
     rails db:migrate
+    https://github.com/alex-magana/eat-in/pull/2/files
 
 Add specs for model Restaurant
     https://github.com/alex-magana/eat-in/commit/67b3bd089a9a5587ee13cf8fa84618437db3937b
